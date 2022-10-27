@@ -38,10 +38,13 @@ test:
     - 7zr a xxx.7z xxx
 
 about:
-  home: http://sourceforge.net/projects/p7zip/
+  home: https://sourceforge.net/projects/p7zip/
   summary: p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip, see www.7-zip.org ) for Unix.
   license: LGPL-2.0-or-later
+  license_family: LGPL
   license_file: DOC/License.txt
+  doc_url: https://sourceforge.net/projects/p7zip/
+  dev_url: https://sourceforge.net/projects/p7zip/
 
 extra:
   recipe-maintainers:
