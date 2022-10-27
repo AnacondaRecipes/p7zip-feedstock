@@ -27,6 +27,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
+    - patch                  # [not win]
   host:
   run:
 
