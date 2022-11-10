@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://iweb.dl.sourceforge.net/project/p7zip/p7zip/{{ version }}/p7zip_{{ version }}_src_all.tar.bz2
+  url: https://sourceforge.net/projects/p7zip/files/p7zip/{{ version }}/p7zip_{{ version }}_src_all.tar.bz2
   sha256: 5eb20ac0e2944f6cb9c2d51dd6c4518941c185347d4089ea89087ffdd6e2341f
   patches:
     - 12-CVE-2016-9296.patch
@@ -18,8 +18,7 @@ source:
     - CVE-2018-10115.patch
 
 build:
-  # to be higher then the bioconda package
-  number: 1001
+  number: 0
   skip: True  # [win]
 
 requirements:
@@ -27,6 +26,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
+    - patch                  # [not win]
+    - m2-patch               # [win]
   host:
   run:
 
@@ -38,12 +39,19 @@ test:
     - 7zr a xxx.7z xxx
 
 about:
-  home: http://sourceforge.net/projects/p7zip/
-  summary: p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip, see www.7-zip.org ) for Unix.
-  license: LGPL-2.0-or-later
+  home: https://sourceforge.net/projects/p7zip/
+  summary: p7zip is a port of the Windows programs 7z.exe and 7za.exe provided by 7-zip.
+  description: |
+    7-zip is a file archiver with the highest compression ratio. See
+    for more information www.7-zip.org site.
+  license: LGPL-2.0-or-later AND LicenseRef-scancode-rar-winrar-eula
+  license_family: Other
   license_file: DOC/License.txt
+  doc_url: https://sourceforge.net/projects/p7zip/
+  dev_url: https://sourceforge.net/projects/p7zip/
 
 extra:
   recipe-maintainers:
     - bgruening
     - isuruf
+    - katietz
