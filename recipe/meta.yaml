@@ -18,8 +18,7 @@ source:
     - CVE-2018-10115.patch
 
 build:
-  # to be higher then the bioconda package
-  number: 1001
+  number: 0
   skip: True  # [win]
 
 requirements:
