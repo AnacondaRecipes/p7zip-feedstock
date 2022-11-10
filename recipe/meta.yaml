@@ -45,8 +45,8 @@ about:
   description: |
     7-zip is a file archiver with the highest compression ratio. See
     for more information www.7-zip.org site.
-  license: LGPL-2.0-or-later
-  license_family: LGPL
+  license: LGPL-2.0-or-later AND LicenseRef-scancode-rar-winrar-eula
+  license_family: Other
   license_file: DOC/License.txt
   doc_url: https://sourceforge.net/projects/p7zip/
   dev_url: https://sourceforge.net/projects/p7zip/
